@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Valley Mat – On-call Tractors & Machinery in Kashmir</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Valley Mat connects farmers with tractors, load carriers and trucks on-call in Baramulla & nearby Kashmir areas—fast, reliable and affordable." />
+  <meta name="theme-color" content="#1b5e20" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Arial,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',sans-serif}
+    body{background:#f5f7f5;color:#222;line-height:1.45}
+    header{background:linear-gradient(135deg,#1b5e20,#4caf50);color:#fff;padding:18px 20px;position:sticky;top:0;z-index:20}
+    .logo{font-size:20px;font-weight:700;letter-spacing:1px}
+    nav{margin-top:8px}
+    nav a{color:#e8f5e9;margin-right:14px;text-decoration:none;font-size:14px}
+    nav a:hover{text-decoration:underline}
+
+    .container{max-width:980px;margin:0 auto;padding:20px}
+
+    .hero{display:flex;flex-wrap:wrap;align-items:center;padding:28px 0}
+    .hero-text{flex:1 1 280px;padding-right:20px}
+    .hero-badge{display:inline-block;background:#e8f5e9;color:#1b5e20;padding:6px 12px;border-radius:20px;font-size:13px;margin-bottom:12px}
+    h1{font-size:28px;margin:8px 0;color:#1b5e20}
+    p{margin-bottom:10px}
+    .hero-actions{margin-top:12px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:6px;font-size:14px;text-decoration:none;cursor:pointer}
+    .btn-primary{background:#2e7d32;color:#fff;border:none}
+    .btn-primary:active{transform:translateY(1px)}
+    .btn-outline{border:1px solid #2e7d32;color:#2e7d32;background:transparent;margin-left:8px}
+    .hero-visual{flex:1 1 260px;text-align:center;margin-top:18px}
+
+    .mountains{width:100%;max-width:360px;height:200px;background:linear-gradient(to top,#2e7d32 0,#4caf50 40%,#81c784 100%);border-radius:18px;position:relative;overflow:hidden;box-shadow:0 8px 16px rgba(0,0,0,0.12)}
+    .mountain{position:absolute;bottom:0;border-style:solid;border-color:transparent}
+    .m1{left:5%;border-width:0 80px 140px 80px;border-bottom-color:#1b5e20}
+    .m2{left:35%;border-width:0 90px 170px 90px;border-bottom-color:#2e7d32}
+    .m3{right:0;border-width:0 70px 130px 70px;border-bottom-color:#33691e}
+    .road{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:80px;height:220px;background:#424242;border-radius:50% 50% 0 0;box-shadow:0 -4px 0 #212121 inset}
+    .road::before{content:"";position:absolute;left:50%;top:10px;transform:translateX(-50%);width:6px;height:200px;background-image:linear-gradient(#fafafa 30%,transparent 30%);background-size:6px 20px;background-repeat:repeat-y}
+    .tractor{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);width:70px;height:35px}
+    .tractor-body{position:absolute;bottom:10px;left:12px;right:4px;height:16px;background:#111;border-radius:3px}
+    .tractor-cabin{position:absolute;bottom:20px;left:18px;width:20px;height:14px;background:#111;border-radius:3px 3px 0 0}
+    .wheel-big,.wheel-small{position:absolute;bottom:0;border-radius:50%;background:#000}
+    .wheel-big{left:6px;width:16px;height:16px}
+    .wheel-small{right:6px;width:12px;height:12px}
+    .wheel-big::after,.wheel-small::after{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#555;border-radius:50%}
+    .wheel-big::after{width:6px;height:6px}
+    .wheel-small::after{width:4px;height:4px}
+
+    section{padding:22px 0;border-top:1px solid #dfe5df}
+    h2{font-size:20px;margin-bottom:10px;color:#1b5e20}
+    .two-col{display:flex;flex-wrap:wrap;gap:18px}
+    .two-col>div{flex:1 1 260px}
+    ul{list-style:none;margin-top:6px}
+    li{margin-bottom:8px;padding-left:18px;position:relative;font-size:14px}
+    li::before{content:"•";position:absolute;left:0;top:0;color:#2e7d32}
+    .card-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
+    .card{flex:1 1 200px;background:#fff;border-radius:8px;padding:12px;box-shadow:0 2px 6px rgba(0,0,0,0.06);font-size:14px}
+    .contact-box{background:#e8f5e9;border-radius:10px;padding:14px;margin-top:10px;font-size:14px}
+    footer{padding:15px 20px 25px;text-align:center;font-size:12px;color:#555;border-top:1px solid #dfe5df;margin-top:20px}
+
+    @media (max-width:640px){header{text-align:center}nav a{display:inline-block;margin:6px 8px}.hero{flex-direction:column}.hero-text{padding-right:0}}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Valley Mat",
+    "image":"",
+    "@id":"",
+    "url":"",
+    "telephone":"+917051062883",
+    "priceRange":"₹",
+    "address":{
+      "@type":"PostalAddress",
+      "addressLocality":"Baramulla",
+      "addressRegion":"Jammu and Kashmir",
+      "addressCountry":"IN"
+    },
+    "areaServed":"Baramulla, Sopore, Pattan and nearby villages",
+    "description":"On-call tractors, load carriers and trucks for agricultural work, land leveling and transport in Kashmir."
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo" aria-label="Valley Mat">Valley Mat</div>
+    <nav aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#why-us">Why Valley Mat</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-text">
+        <span class="hero-badge">Kashmir • Farm machinery on call</span>
+        <h1 id="hero-heading">Connect farmers with tractors, sprayers, and loaders in minutes.</h1>
+        <p>Valley Mat helps farmers quickly find trusted tractor and machinery owners for ploughing, spraying, fruit transport, and more in their local area.</p>
+        <p>You call once, Valley Mat sends the right vehicle and driver and handles the coordination for you.</p>
+        <div class="hero-actions">
+          <!-- WhatsApp booking link (direct chat) -->
+          <a class="btn btn-primary" href="https://wa.me/917051062883?text=Hello%20Valley%20Mat,%20I%20want%20to%20book%20a%20machine" target="_blank" rel="noopener noreferrer">Book on WhatsApp</a>
+          <!-- Replace with your Google Form URL when ready -->
+          <a class="btn btn-outline" href="https://forms.gle/PLACEHOLDER_REGISTER" target="_blank" rel="noopener noreferrer">Register your vehicle</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="mountains" role="img" aria-label="Mountains and tractor">
+          <div class="mountain m1"></div>
+          <div class="mountain m2"></div>
+          <div class="mountain m3"></div>
+          <div class="road"></div>
+          <div class="tractor">
+            <div class="tractor-body"></div>
+            <div class="tractor-cabin"></div>
+            <div class="wheel-big"></div>
+            <div class="wheel-small"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Services for farmers</h2>
+      <div class="two-col">
+        <div>
+          <p>Valley Mat focuses on seasonal needs so you get work done on time without running around to find vehicles.</p>
+          <ul>
+            <li>Tractor services for ploughing and field preparation</li>
+            <li>Sprayer vehicles for orchards and crop protection</li>
+            <li>Fruit and vegetable transport during harvest season</li>
+            <li>Load carriers and pickups for construction material and supplies</li>
+          </ul>
+        </div>
+        <div>
+          <p>Each booking is matched with a nearby driver who agrees the rate and timing before confirmation.</p>
+          <ul>
+            <li>Local drivers familiar with village roads and fields</li>
+            <li>Flexible hourly, daily, or per-kanal pricing</li>
+            <li>Clear communication on timing and location</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <h2>How Valley Mat works</h2>
+      <div class="card-row">
+        <div class="card"><strong>1. You contact Valley Mat</strong><p>Call or WhatsApp with your location, work type and preferred time.</p></div>
+        <div class="card"><strong>2. We find the right vehicle</strong><p>Nearby registered owners receive request and confirm availability & price.</p></div>
+        <div class="card"><strong>3. Work is completed</strong><p>Driver reaches your field, completes the work, and you pay as agreed.</p></div>
+        <div class="card"><strong>4. Small commission</strong><p>A small service commission helps keep Valley Mat running and fair for farmers.</p></div>
+      </div>
+    </section>
+
+    <section id="why-us">
+      <h2>Why choose Valley Mat</h2>
+      <div class="two-col">
+        <div>
+          <ul>
+            <li>Built for Kashmiri terrain and farmers</li>
+            <li>Faster access to tractors & equipment in peak season</li>
+            <li>Simple one-call system instead of calling many drivers</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>More work opportunities for vehicle owners</li>
+            <li>Fair transparent commission model</li>
+            <li>Respect for privacy and local trust</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="join">
+      <h2>For tractor & vehicle owners</h2>
+      <div class="two-col">
+        <div>
+          <p>Register your tractor, sprayer, pickup or load carrier with Valley Mat to receive regular work leads from nearby farmers.</p>
+          <ul>
+            <li>Share basic details and rates</li>
+            <li>Receive only the job types you accept</li>
+            <li>No joining fee — small commission on confirmed work</li>
+          </ul>
+        </div>
+        <div>
+          <p>Register with the form or contact us on WhatsApp.</p>
+          <p>Keep vehicle documents, license and phone number ready.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Valley Mat</h2>
+      <div class="contact-box" role="region" aria-label="Contact information">
+        <p><strong>Phone / WhatsApp:</strong> <a href="https://wa.me/917051062883" target="_blank" rel="noopener noreferrer">+91-70510-62883 (WhatsApp)</a></p>
+        <p><strong>Service area:</strong> Baramulla and nearby villages in Kashmir</p>
+        <p><strong>Booking hours:</strong> 8:00 AM – 7:00 PM (seasonal)</p>
+      </div>
+      <p style="font-size:13px;margin-top:8px">To register, send a WhatsApp message: <em>“Register vehicle with Valley Mat”</em> and you'll receive the form link.</p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Valley Mat. All rights reserved.
+  </footer>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
