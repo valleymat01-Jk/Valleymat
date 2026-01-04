@@ -9,6 +9,7 @@
   <link rel="icon" href="9079.jpeg" />
 
   <style>
+    /* 1. BASIC RESET & TYPOGRAPHY */
     *{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
     body{
       background:linear-gradient(135deg,#f8fafc 0%,#e2e8f0 45%,#f1f5f9 100%);
@@ -18,6 +19,7 @@
       overflow-x:hidden;
       position:relative;
     }
+    /* Subtle background texture for premium feel */
     body::before{
       content:'';
       position:fixed;
@@ -31,6 +33,7 @@
     }
     img{max-width:100%;display:block}
 
+    /* 2. NAVIGATION */
     header{
       position:sticky;
       top:0;
@@ -80,6 +83,7 @@
       transform:translateY(-1px);
     }
 
+    /* 3. GENERAL SECTIONS */
     section{
       max-width:1200px;
       margin:0 auto;
@@ -105,7 +109,7 @@
       margin-bottom:22px;
     }
 
-    /* HERO */
+    /* 4. HERO SECTION */
     .hero{
       padding:12px 20px 80px;
       position:relative;
@@ -358,14 +362,14 @@
       color:#fdf2f8;
     }
 
-    /* SCROLL ANIMATIONS */
+    /* 5. SCROLL ANIMATIONS */
     .scroll-fade{opacity:0;transform:translateY(40px);transition:opacity .9s ease,transform .9s ease}
     .scroll-fade-left{opacity:0;transform:translateX(-60px);transition:opacity .9s ease,transform .9s ease}
     .scroll-fade-right{opacity:0;transform:translateX(60px);transition:opacity .9s ease,transform .9s ease}
     .scroll-fade-bottom{opacity:0;transform:translateY(60px);transition:opacity .9s ease,transform .9s ease}
     .scroll-visible{opacity:1;transform:translateX(0) translateY(0)}
 
-    /* INFO PANELS */
+    /* 6. INFO PANELS */
     .info-panels{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -395,7 +399,7 @@
     .info-panel p{font-size:13px;color:#bae6fd}
     @keyframes panelGlow{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 
-    /* SECTIONS & FEATURES */
+    /* 7. IMAGES AND CARDS */
     .section-image{
       display:grid;
       grid-template-columns:1fr 1fr;
@@ -408,6 +412,7 @@
       box-shadow:0 16px 36px rgba(0,0,0,0.18);
       height:260px;
       object-fit:cover;
+      width: 100%;
     }
 
     .features{
@@ -456,255 +461,7 @@
     .feature h3{font-size:18px;color:#0f172a;margin-bottom:8px}
     .feature p{color:#64748b;font-size:13px}
 
-    /* TRACTOR & ORCHARD SCENES (NO PINEAPPLE, NO RANDOM CARDS) */
-    .tractor-scene{
-      margin-top:24px;
-      border-radius:22px;
-      overflow:hidden;
-      background:linear-gradient(to top,#166534 0,#14532d 30%,#22c55e 52%,#22c1c3 100%);
-      height:220px;
-      position:relative;
-      box-shadow:0 22px 52px rgba(0,0,0,0.4);
-    }
-    .tractor-ground{
-      position:absolute;
-      inset:auto 0 0;
-      height:38%;
-      background:repeating-linear-gradient(-8deg,#14532d,#14532d 16px,#166534 16px,#166534 26px);
-    }
-    .tractor-row{
-      position:absolute;
-      left:-40%;
-      bottom:18%;
-      width:60%;
-      height:26%;
-      border-radius:18px;
-      background:linear-gradient(to right,#4d7c0f,#65a30d);
-      box-shadow:0 18px 30px rgba(15,23,42,0.65);
-      display:flex;
-      align-items:center;
-      padding-left:18px;
-      animation:tractorMove 10s linear infinite;
-    }
-    .tractor-body{
-      width:100px;
-      height:60px;
-      background:linear-gradient(145deg,#f97316,#b91c1c);
-      border-radius:16px 16px 12px 12px;
-      position:relative;
-      box-shadow:0 12px 20px rgba(0,0,0,0.5);
-    }
-    .tractor-cabin{
-      position:absolute;
-      top:-32px;
-      left:20px;
-      width:60px;
-      height:32px;
-      border-radius:10px 10px 4px 4px;
-      background:linear-gradient(135deg,#e5e7eb,#60a5fa);
-    }
-    .tractor-wheel{
-      position:absolute;
-      bottom:-18px;
-      width:34px;
-      height:34px;
-      border-radius:50%;
-      background:#020617;
-      box-shadow:0 8px 12px rgba(0,0,0,0.6);
-    }
-    .tractor-wheel::after{
-      content:'';
-      position:absolute;
-      inset:7px;
-      border-radius:inherit;
-      background:#e5e7eb;
-    }
-    .tractor-wheel.back{left:6px}
-    .tractor-wheel.front{right:6px}
-    .tractor-plough{
-      position:absolute;
-      right:-45px;
-      bottom:-4px;
-      width:55px;
-      height:20px;
-      border-radius:18px;
-      background:linear-gradient(120deg,#475569,#0f172a);
-      box-shadow:0 8px 16px rgba(15,23,42,0.7);
-    }
-    .tractor-plough::after{
-      content:'';
-      position:absolute;
-      inset:6px 6px 4px;
-      border-radius:inherit;
-      background:repeating-linear-gradient(120deg,#e5e7eb,#e5e7eb 4px,#94a3b8 4px,#94a3b8 7px);
-    }
-    @keyframes tractorMove{
-      0%{transform:translateX(0)}
-      45%{transform:translateX(210%)}
-      46%{transform:translateX(210%)}
-      100%{transform:translateX(0)}
-    }
-
-    .orchard-scene{
-      margin-top:24px;
-      border-radius:22px;
-      overflow:hidden;
-      background:linear-gradient(to top,#052e16 0,#166534 35%,#22c55e 60%,#0ea5e9 100%);
-      height:240px;
-      position:relative;
-      box-shadow:0 22px 52px rgba(0,0,0,0.45);
-    }
-    .orchard-floor{
-      position:absolute;
-      inset:auto 0 0;
-      height:35%;
-      background:repeating-linear-gradient(180deg,#14532d,#14532d 12px,#166534 12px,#166534 20px);
-    }
-    .orchard-tree{
-      position:absolute;
-      bottom:28%;
-      width:80px;
-      height:130px;
-    }
-    .orchard-tree .trunk{
-      position:absolute;
-      bottom:0;
-      left:32px;
-      width:16px;
-      height:58px;
-      background:linear-gradient(to right,#4b3b2a,#7c5f3b);
-      border-radius:8px;
-    }
-    .orchard-tree .crown{
-      position:absolute;
-      bottom:48px;
-      left:8px;
-      width:64px;
-      height:64px;
-      border-radius:26px;
-      background:radial-gradient(circle at 30% 10%,#dcfce7 0,#22c55e 40%,#14532d 100%);
-      box-shadow:0 14px 30px rgba(0,0,0,0.55);
-    }
-    .orchard-apple{
-      position:absolute;
-      width:10px;
-      height:10px;
-      border-radius:50%;
-      background:#ef4444;
-      box-shadow:0 0 0 1px rgba(127,29,29,0.9);
-    }
-    .orchard-tractor-row{
-      position:absolute;
-      right:-40%;
-      bottom:18%;
-      width:68%;
-      height:28%;
-      border-radius:20px;
-      background:linear-gradient(to right,#4b5563,#111827);
-      display:flex;
-      align-items:center;
-      padding-left:24px;
-      animation:orchardTractorMove 11s linear infinite;
-    }
-    @keyframes orchardTractorMove{
-      0%{transform:translateX(0)}
-      45%{transform:translateX(-230%)}
-      46%{transform:translateX(-230%)}
-      100%{transform:translateX(0)}
-    }
-    .orchard-tractor{
-      position:relative;
-      width:110px;
-      height:64px;
-      border-radius:18px 18px 12px 12px;
-      background:linear-gradient(135deg,#16a34a,#15803d);
-      box-shadow:0 12px 24px rgba(0,0,0,0.6);
-    }
-    .orchard-tractor-cabin{
-      position:absolute;
-      top:-34px;
-      left:22px;
-      width:62px;
-      height:34px;
-      border-radius:10px 10px 4px 4px;
-      background:linear-gradient(135deg,#bae6fd,#38bdf8);
-    }
-    .orchard-tractor-wheel{
-      position:absolute;
-      bottom:-20px;
-      width:36px;
-      height:36px;
-      border-radius:50%;
-      background:#020617;
-      box-shadow:0 9px 14px rgba(0,0,0,0.7);
-    }
-    .orchard-tractor-wheel::after{
-      content:'';
-      position:absolute;
-      inset:7px;
-      border-radius:inherit;
-      background:#e5e7eb;
-    }
-    .orchard-tractor-wheel.back{left:8px}
-    .orchard-tractor-wheel.front{right:8px}
-    .orchard-trolley{
-      position:absolute;
-      left:108px;
-      bottom:-4px;
-      width:130px;
-      height:40px;
-      border-radius:10px;
-      background:linear-gradient(to right,#451a03,#92400e);
-      box-shadow:0 14px 18px rgba(0,0,0,0.75);
-      display:flex;
-      align-items:flex-end;
-      padding:0 8px 8px;
-      gap:6px;
-    }
-    .orchard-box{
-      width:26px;
-      height:26px;
-      border-radius:4px;
-      background:linear-gradient(135deg,#f97316,#b45309);
-      box-shadow:0 5px 8px rgba(0,0,0,0.6);
-      position:relative;
-    }
-    .orchard-box::before{
-      content:'';
-      position:absolute;
-      inset:4px;
-      border-radius:2px;
-      background:repeating-linear-gradient(90deg,#fed7aa,#fed7aa 4px,#f97316 4px,#f97316 7px);
-      opacity:.95;
-    }
-    .orchard-logs{
-      position:absolute;
-      left:248px;
-      bottom:-3px;
-      width:136px;
-      height:36px;
-      display:flex;
-      align-items:flex-end;
-      gap:4px;
-    }
-    .orchard-log{
-      width:40px;
-      height:18px;
-      border-radius:18px;
-      background:radial-gradient(circle at 20% 50%,#facc15 0,#b45309 55%,#451a03 100%);
-      box-shadow:0 6px 10px rgba(0,0,0,0.6);
-      position:relative;
-    }
-    .orchard-log::before{
-      content:'';
-      position:absolute;
-      inset:4px;
-      border-radius:inherit;
-      background:radial-gradient(circle,#fee2b3 0,#92400e 65%);
-      opacity:.9;
-    }
-
-    /* PROCESS STEPS */
+    /* 8. PROCESS STEPS */
     .process-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -778,7 +535,7 @@
       margin-top:20px;
     }
 
-    /* POPUP STRIP */
+    /* 9. POPUP STRIP */
     .top-popup-strip{
       position:fixed;
       right:16px;
@@ -830,6 +587,7 @@
       100%{opacity:1;transform:translateY(0)}
     }
 
+    /* 10. RESPONSIVE */
     @media (max-width:900px){
       .hero-inner{grid-template-columns:1fr;gap:28px;text-align:center}
       .hero-image{order:-1}
@@ -917,8 +675,9 @@
           </a>
         </div>
       </div>
+      
       <div class="hero-image">
-        <img src="https://images.pexels.com/photos/2255801/pexels-photo-2255801.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Kashmir apple orchard ready for machinery work">
+        <img src="https://images.pexels.com/photos/2255801/pexels-photo-2255801.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Kashmir apple orchard">
         <div class="hero-float-stats">
           <div class="hero-float-card">
             <span class="hero-float-dot"></span>
@@ -936,18 +695,6 @@
   <section id="services">
     <h2>Services That Make You Money</h2>
     <p class="lead">Farmers save time and crop. Owners fill idle hours with paid work. Every booking starts on WhatsApp.</p>
-
-    <div class="tractor-scene scroll-fade-bottom">
-      <div class="tractor-ground"></div>
-      <div class="tractor-row">
-        <div class="tractor-body">
-          <div class="tractor-cabin"></div>
-          <div class="tractor-wheel back"></div>
-          <div class="tractor-wheel front"></div>
-          <div class="tractor-plough"></div>
-        </div>
-      </div>
-    </div>
 
     <div class="section-image full scroll-fade">
       <img src="https://images.pexels.com/photos/2962309/pexels-photo-2962309.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Tractor ploughing Kashmir farmland">
@@ -1041,58 +788,6 @@
   <section id="owners">
     <h2>For Owners & Drivers</h2>
     <p class="lead">Turn idle time into steady daily income. Jobs come to your WhatsApp.</p>
-
-    <div class="orchard-scene scroll-fade-bottom">
-      <div class="orchard-floor"></div>
-
-      <div class="orchard-tree" style="left:10%;">
-        <div class="trunk"></div>
-        <div class="crown"></div>
-        <div class="orchard-apple" style="left:20px;top:60px;"></div>
-        <div class="orchard-apple" style="left:36px;top:46px;"></div>
-        <div class="orchard-apple" style="left:48px;top:64px;"></div>
-      </div>
-      <div class="orchard-tree" style="left:30%;">
-        <div class="trunk"></div>
-        <div class="crown"></div>
-        <div class="orchard-apple" style="left:18px;top:52px;"></div>
-        <div class="orchard-apple" style="left:40px;top:66px;"></div>
-        <div class="orchard-apple" style="left:52px;top:54px;"></div>
-      </div>
-      <div class="orchard-tree" style="left:52%;">
-        <div class="trunk"></div>
-        <div class="crown"></div>
-        <div class="orchard-apple" style="left:22px;top:58px;"></div>
-        <div class="orchard-apple" style="left:44px;top:46px;"></div>
-        <div class="orchard-apple" style="left:32px;top:68px;"></div>
-      </div>
-      <div class="orchard-tree" style="left:72%;">
-        <div class="trunk"></div>
-        <div class="crown"></div>
-        <div class="orchard-apple" style="left:18px;top:54px;"></div>
-        <div class="orchard-apple" style="left:46px;top:62px;"></div>
-        <div class="orchard-apple" style="left:36px;top:44px;"></div>
-      </div>
-
-      <div class="orchard-tractor-row">
-        <div class="orchard-tractor">
-          <div class="orchard-tractor-cabin"></div>
-          <div class="orchard-tractor-wheel back"></div>
-          <div class="orchard-tractor-wheel front"></div>
-        </div>
-        <div class="orchard-trolley">
-          <div class="orchard-box"></div>
-          <div class="orchard-box"></div>
-          <div class="orchard-box"></div>
-          <div class="orchard-box"></div>
-        </div>
-        <div class="orchard-logs">
-          <div class="orchard-log"></div>
-          <div class="orchard-log"></div>
-          <div class="orchard-log"></div>
-        </div>
-      </div>
-    </div>
 
     <div class="section-image full scroll-fade">
       <img src="https://images.pexels.com/photos/2058132/pexels-photo-2058132.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Farm vehicles ready for work in Kashmir">
@@ -1218,4 +913,4 @@
     });
   </script>
 </body>
-  </html>
+</html>
